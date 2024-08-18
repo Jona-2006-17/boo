@@ -77,6 +77,11 @@ img{
     width: 90%;
     margin-left: 3.5em;
 }
+.color{
+    background-color: rgba(10, 3, 26, 0.952);
+    background-image: linear-gradient( to right, rgb(75, 0, 146),  rgba(26, 10, 63, 0.63), rgba(13, 5, 34, 0.548) );
+
+}
 
 .contenido{
     
@@ -85,6 +90,10 @@ img{
     padding-top: 1em;
     padding-bottom: 1em;
     background-size: cover;
+}
+.contenido .imagen:hover{
+    transform: scale(1.02);
+    
 }
 .contenido .imagen{
     background-image: url('..//img/ky.jpg');
@@ -109,7 +118,7 @@ img{
    
 }
 .contenido  .cinco{
-    background-image: url('..//img/p5.jpg');
+    background-image: url('..//img/mine.jpg');
     background-size: cover;
    
 }
@@ -133,11 +142,7 @@ img{
     background-size: cover;
    
 }
-.contenido .imagen:hover{
-    transition-duration: 1s ;
-    width: 20%
-    
-}
+
 
 .contenido .row{
     width: 95%;
@@ -189,9 +194,18 @@ img{
 .container-fluid-tres .primero{
     margin-left: 10em;
 }
-.container-fluid-tres .primero, .container-fluid-tres .segundo, .container-fluid-tres .tercero:hover{
+
+
+.ancho{
+    width: 96%;
+    margin-left: 3.4em;
+}
+.titu:hover{
+    background-color: ;
+    transform: scaleX(0.98);
+    transition-duration: 1s;
     cursor: pointer;
-    opacity: 20;
+
 }
 
 
@@ -271,11 +285,7 @@ img{
 
    
 
-    .contenido .imagen:hover{
-        transition: none;
-        display: none;
-        
-    }
+   
 
     .degrada a{
         margin-left: 14em;
@@ -301,12 +311,7 @@ img{
 
 
 
-    .contenido .imagen:hover{
-        transition-duration: 1s ;
-        width: 40%
-        
-    }
-
+   
 
     
 }
