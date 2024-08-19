@@ -29,7 +29,7 @@ nav h2{
     height: 100%;
     position: fixed;
     color: white;
-    
+    overflow: hidden;
 }
 .row{
     height: 50%;
@@ -45,11 +45,29 @@ nav h2{
 .barra .col p{
     font-size: 0.5em;
 }
+.barra .cursor{
+    display: block;
+}
 .barra .cursor:hover{
     color: rgba(121, 110, 110, 0.685);
 }
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu-items{
+    display: flex;
+    
+}
+#menu-toggle{
+    display: none;
+}
+.menu-items .cursor{
+    flex: 1;
+}
 
-.container-fluid{ 
+.fondo{ 
     padding: 1em;
     width: 100%;
     
@@ -57,7 +75,7 @@ nav h2{
     background-size: cover;
 }
 
-.container-fluid .col{
+.fondo .col{
     
     margin-left: 4.5em;
     
@@ -159,14 +177,13 @@ img{
 }
 
 .container-fluid-dos{
-    border: black ;
-    width: 98%;
     height: 20em;
-    margin-left: 3.3em;
+   
     margin-top: -4em;
     background-color: rgba(10, 3, 26, 0.952);
     background-image: linear-gradient( to right, rgba(143, 124, 187, 0.952),  rgba(36, 14, 85, 0.952), rgba(10, 3, 26, 0.952) );
 }
+
 
 .container-fluid-tres{
     margin-top: -4em;
@@ -178,19 +195,12 @@ img{
 }
 
 
-.degrada .tama{
-    margin-top: 3em;
-    padding-bottom: 3em;
-    margin-right: -2em;
-    
-}
+
 .degrada .uno{
     margin-left: 3em;
 }
 
-.degrada img{
-    width: 70%;
-}
+
 .container-fluid-tres .primero{
     margin-left: 10em;
 }
@@ -201,15 +211,116 @@ img{
     margin-left: 3.4em;
 }
 .titu:hover{
-    background-color: ;
     transform: scaleX(0.98);
     transition-duration: 1s;
     cursor: pointer;
 
 }
+.fila{
+    margin-top: -7em;
+}
+.fila2{
+    margin-top: -3em;
+    
+}
 
+.opaco{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media (max-width: 370px){
+.imagenes{
+    width: 500px;
+    position: relative;
+}
+
+.imagenes img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.content:hover{
+    opacity: 1;
+}
+.content > *{
+   transform: translateY(25px);
+   transition: transform 0.6s;
+}
+.content:hover > *{
+    transform:  translateY(0px); 
+}
+.slide2 .row{
+    width: 90%;
+}
+.slide2{
+    margin-left: 2em;
+}
+
+@media (max-width: 575px){
+    .container-fluid-tres .row{
+      
+        width: 80%;
+    }
+    .container-fluid-tres .col-9{
+      
+        padding-right: 3em;
+    }
+    .container-fluid-dos {
+        display: none;
+    }
+    
+    .menu-items{
+        display: none;
+        background-color: rgb(10, 3, 26);
+        
+    }
+    .fondo{ 
+        padding: 1em;
+        width: 100%;
+        height: 14em;
+        background-image: url('..//img/R.jpg');
+        background-size: cover;
+    }
+    .carrusel{
+        display: none;
+    }
+    
+    
+    .barra{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menu-icon{
+        background-color: rgb(10, 3, 26);
+        margin-left: -0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu-items {
+        display: flex;
+    }
+
     .carousel-item{
         height: 15em;
         width: 110%;
@@ -226,15 +337,13 @@ img{
         display: none;
     }
     
-    .barra{
-        display: none;
-    }
+    
     .carousel-caption{
         bottom: 20px;
     }
     
     .carrusel{
-        margin-left: 2em;
+        margin-left: 1em;
     }
     .container-fluid .col{
         
@@ -243,9 +352,49 @@ img{
 
         
     }
+   
+    .contenido .imagen{
+        margin-left: 6em;
+    }
+    
     
    
 }
+@media (max-width: 667px){
+    
+    .menu-items{
+        display: none;
+        background-color: rgb(10, 3, 26);
+    }
+    
+    .barra{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menu-icon{
+        background-color: rgb(10, 3, 26);
+        margin-left: -0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu-items {
+        display: flex;
+    }
+
+    .contenido .row{
+        margin-left: 0;
+    }
+
+    .carrusel{
+        margin-left: 1em;
+    }
+}
+
+
 @media (max-width: 767px){
     .carousel-item{
         min-height: 200px;
@@ -253,7 +402,10 @@ img{
     .navbar .logo{
         display: none;
     }
-
+    .container-fluid-dos{
+        display: none;
+    }
+    
     .carousel-item img{
         height: 300px;
     }
