@@ -164,7 +164,7 @@ img{
 
 .contenido .row{
     width: 95%;
-    margin-left: 4em;
+    margin-left: 2em;
     text-align: center;
     margin-top: 1em;
 }
@@ -273,6 +273,12 @@ img{
     margin-left: 2em;
 }
 
+.logo{
+    margin-top: 1em;
+}
+.nav input{
+    margin-top: 0.5em;
+}
 @media (max-width: 575px){
     .container-fluid-tres .row{
       
@@ -291,6 +297,10 @@ img{
         background-color: rgb(10, 3, 26);
         
     }
+    .menu-items .si{
+        background-color: rgb(10, 3, 26);
+        margin-top: -1.2em;
+    }
     .fondo{ 
         padding: 1em;
         width: 100%;
@@ -306,12 +316,11 @@ img{
     .barra{
         background-color: rgba(0, 0, 0, 0);
     }
+    .container .esquina{
+        margin-left: -6em;
+    }
 
     .menu-icon{
-        background-color: rgb(10, 3, 26);
-        margin-left: -0.5em;
-        padding-left: 1em;
-        padding-right: 1em;
         display: block;
         font-size: 30px;
         cursor: pointer;
@@ -333,7 +342,7 @@ img{
     }
 
    
-    .navbar .logo{
+    .logo{
         display: none;
     }
     
@@ -370,15 +379,17 @@ img{
     .barra{
         background-color: rgba(0, 0, 0, 0);
     }
+    .menu-items .si{
+        background-color: rgb(10, 3, 26);
+        margin-top: -1.2em;
+    }
 
     .menu-icon{
-        background-color: rgb(10, 3, 26);
-        margin-left: -0.5em;
-        padding-left: 1em;
-        padding-right: 1em;
         display: block;
         font-size: 30px;
         cursor: pointer;
+       
+        margin-left: 0.5em;
     }
 
     #menu-toggle:checked + .menu-icon + .menu-items {
@@ -399,7 +410,7 @@ img{
     .carousel-item{
         min-height: 200px;
     }
-    .navbar .logo{
+    .logo{
         display: none;
     }
     .container-fluid-dos{
