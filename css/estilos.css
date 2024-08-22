@@ -31,7 +31,7 @@ nav h2{
     color: white;
     overflow: hidden;
 }
-.row{
+.carrusel .row{
     height: 50%;
     margin-top: 4em;
 }
@@ -76,7 +76,7 @@ nav h2{
 }
 
 .fondo .col{
-    
+    cursor: pointer;
     margin-left: 4.5em;
     
 }
@@ -119,6 +119,13 @@ img{
     margin-left: 2em;
     cursor: pointer;
     margin-top: 2em;
+    height: 300px;
+}
+.contenido .btn{
+    margin-top: 250px;
+}
+.secret{
+    height: 300px;
 }
 .contenido  .dos{
     background-image: url('..//img/p1.jpg');
@@ -164,7 +171,7 @@ img{
 
 .contenido .row{
     width: 95%;
-    margin-left: 2em;
+    margin-left: 64px;
     text-align: center;
     margin-top: 1em;
 }
@@ -186,7 +193,7 @@ img{
 
 
 .container-fluid-tres{
-    margin-top: -4em;
+    
     background-image: linear-gradient( to right, rgb(118, 84, 150),  rgba(31, 14, 73, 0.911), rgba(13, 6, 32, 0.973) );
 
 }
@@ -199,7 +206,9 @@ img{
 .degrada .uno{
     margin-left: 3em;
 }
-
+.degrada{
+    margin-top:60px;
+}
 
 .container-fluid-tres .primero{
     margin-left: 10em;
@@ -268,6 +277,7 @@ img{
 }
 .slide2 .row{
     width: 90%;
+    margin-top: 20px;
 }
 .slide2{
     margin-left: 2em;
@@ -278,6 +288,15 @@ img{
 }
 .nav input{
     margin-top: 0.5em;
+}
+
+.back{
+    background-color: rgba(0, 0, 0, 0.884);
+
+}
+
+.walco{
+    background-color: rgb(34, 41, 65);
 }
 @media (max-width: 575px){
     .container-fluid-tres .row{
